@@ -1,0 +1,150 @@
+:root {
+    --clr-primary: #fff;
+    --clr-secondary: #04DDB2;
+    --clr-dark: #333333;
+
+    --mrgn-header-inline: 3rem;
+
+    --fs-heading: 3.5rem;
+    --fs-body-text: 1.5rem;
+    --body-text-width: 420px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+p,
+ul,
+li,
+a,
+body,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clr-dark);
+}
+
+
+.btn {
+    display: inline-block;
+
+    padding: .9rem 1.5rem;
+    
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+
+    border-radius: 50px;
+}
+/* header */
+
+header {
+    position: relative;
+
+    margin-inline: var(--mrgn-header-inline);
+    padding-block: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+}
+
+.logo svg {
+    width: auto;
+    height: 21px;
+    display: block;
+    /* transform: translateY(-2px); */
+}
+
+.download-btn {
+    position: absolute;
+    right: 0;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #929292;
+}
+
+.active {
+    color: var(--clr-dark);
+}
+
+/* main */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2.5em;
+}
+
+.heading-highlight {
+    margin-bottom: 12px;
+    color: var(--clr-secondary);
+}
+
+.section-heading {
+    font-size: var(--fs-heading);
+    line-height: var(--fs-heading);
+    letter-spacing: -2px;
+    margin-bottom: 12px;
+
+}
+
+.section-text {
+    max-width: var(--body-text-width);
+    margin-bottom: 2.5em;
+
+    font-size: var(--fs-body-text);
+    line-height: 1.45;
+
+    text-align: center;
+}
+
+.nav-list-footer {
+    list-style: none;
+}
+
+.nav-link-footer {
+    text-decoration: none;
+    color: var(--clr-dark);
+}
+
+@media (max-width: 640px) {
+    :root {
+        --fs-heading: 2.375rem;
+        --fs-body-text: 1.125rem;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 1200px) {
+    :root {
+        --mrgn-header-inline: 1.25rem;
+        --body-text-width: 550px;
+    }
+}
