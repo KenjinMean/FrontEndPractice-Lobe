@@ -12,7 +12,10 @@
     --sec-cont-max-width: 1088px;
     --sec-cont-padding: 2rem; /*4rem*/
 
-    --footer-padding: 1rem;
+    --footer-pdng-inln: 1rem;
+    --footer-pdng-blk: 1rem;
+    --footer-container-pdng-inln: 1.5rem;
+    --footer-container-pdng-blk: 3.875rem;
     --footer-max-width: 892px;
     --footer-content-padding: 3.875rem 1.5rem;
 
@@ -157,7 +160,7 @@ header {
     height: 2px;
     background-color: #333333;
 
-    transition: all .5s;
+    transition: all 300ms;
 
     z-index: 0;
 
@@ -290,8 +293,54 @@ section {
     border-radius: 25px;
 }
 
+
+/* footer */
+
+.icon-footer {
+    margin-bottom: 1rem;
+}
+
+footer {
+    padding-inline: var(--footer-pdng-inln);
+    padding-block-end: var(--footer-pdng-blk);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    padding-inline: var(--footer-container-pdng-inln);
+    padding-block: var(--footer-container-pdng-blk);
+}
+
+.footer-right {
+    max-width: 350px;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-right.nav {
+    flex-direction: column;
+    flex: 1 1;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: center;
+
+}
+
 .nav-list-footer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 72px;
+    padding-inline: 1.5rem;
     list-style: none;
+    text-align: center;
+}
+
+.nav-item-footer {
+    margin-bottom: 1rem;
 }
 
 .nav-link-footer {
@@ -299,50 +348,21 @@ section {
     color: var(--clr-dark);
 }
 
-/* footer */
-
-footer {
-    padding-inline: var(--footer-padding);
+.nav-header-footer {
+    font-weight: bold;
 }
 
-.footer-left {
+.nav-social-footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    width: 40px;
+    height: 40px;
+    padding-inline: .3rem;
+    padding-top: .4rem;
+    margin-right: 1.7rem;
 
-    padding: 62px 24px;
-    margin: auto;
 
-    max-width: 350px;
-
-    border: var(--debug-border);
-}
-
-.nav-footer-container {
-    flex: 1 1;
-    text-align: center;
-}
-
-.nav-list-footer {
-    margin-bottom: 72px
-}
-
-.nav-list-footer,
-.nav-list-social {
-    display: flex;
-    flex-direction: column;
-
-    text-align: center;
-}
-
-.nav-footer-heading,
-.nav-item-footer {
-    margin-bottom: 1rem;
-}
-
-.nav-footer-heading {
-    font-weight: 700;
+    border-radius: 24px;
+    background-color: var(--clr-secondary);
 }
 
 @media (max-width: 640px) {
